@@ -1,11 +1,25 @@
 {
   "clientes": [
     {
-      "nombre": "Juan NUEVO!",
-      "email": "correo2@correo.com",
-      "telefono": "12",
-      "empresa": "12212",
-      "id": 26
+      "nombre": "Sergio Rex",
+      "email": "sergillosanchillo@hotmail.es",
+      "telefono": "631233",
+      "empresa": "1",
+      "id": 1
+    },
+    {
+      "nombre": "UsaSergio",
+      "email": "olimpo@xn--olimpeos-i3a.com",
+      "telefono": "634345",
+      "empresa": "OlimpoSL",
+      "id": 2
+    },
+    {
+      "nombre": "John",
+      "email": "gordosanonimos@gordos.es",
+      "telefono": "3453453345",
+      "empresa": "GordosSL",
+      "id": 3
     }
   ]
 }

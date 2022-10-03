@@ -1,3 +1,4 @@
+import { nuevoCliente } from "./API.js";
 import { notificacion } from "./funciones.js";
 
 
@@ -15,18 +16,20 @@ function verificarFormulario(e) {
     const zonaNoti = document.querySelector('#formulario');
     
 
-    if (nombre.value.length < 1) return notificacion(zonaNoti, "Nombre icorrecto...", "error");
-    if (corrreo.value.length < 1) return notificacion(zonaNoti, "Correo incorrecto...", "error");
-    if (tlf.value.length < 1) return notificacion(zonaNoti, "Teléfono incorrecto...", "error");
-    if (empresa.value.length < 1) return notificacion(zonaNoti, "Empresa incorrecta...", "error");
-
     const cliente = {
         nombre: nombre.value,
-        correo: corrreo.value,
-        tlf: tlf.value,
+        email: corrreo.value,
+        telefono: tlf.value,
         empresa: empresa.value
     }
 
-    console.log(cliente);
+    if (!validacion(cliente)) return notificacion(zonaNoti,"Recuerda rellenar todos los campos...","error");
+
+    nuevoCliente(cliente);
 
 }
+
+//Verifica el form
+function validacion(obj) {
+    return Object.values(obj).every(input => input !== '');
+} 
